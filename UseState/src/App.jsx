@@ -1,13 +1,15 @@
-import {DerivedState} from "./components/DerivedState";
-import "./components/EV.css";
+// import {DerivedState} from "./components/DerivedState";
 // import {State} from "./components/hooks";
+import {LiftingState} from "./components/liftStateUp";
+import "./components/EV.css";
 export const App =()=>{
   return (
-      <section>
-        <h1></h1>
+      <section className="main-div">
+      
+        {/* <DerivedState/> */}
         {/* <State/> */}
         {/* <Sibling/> */}
-        <DerivedState/>
+        <LiftingState/>
       </section>
   );
 };

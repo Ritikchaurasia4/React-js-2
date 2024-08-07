@@ -4,7 +4,7 @@
     height: 40rem;
     border:  solid #000; */
     /* background-color: #85c1e9; */
-    font-size:2rem;
+    font-size:3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,4 +41,9 @@
 {
     font-size: 30px;
     border: none;
+}
+input
+{
+    width: 10rem;
+    height: 2rem;
 }
