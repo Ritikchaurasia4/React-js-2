@@ -17,7 +17,7 @@
 // };
 // const DisplayComponent =()=>{
     
-//     return <p>The current input values</p>;
+//     return <p>The current input values is :</p>;
 // };
 
 // ======================================== Same code given below in the form of liftState up ==========================
@@ -27,7 +27,7 @@ export const LiftingState=()=>{
     const[inputValue , setInputValue] = useState("");
     return (
     <>
-     < InputComponent inputValue={inputValue} setInputValue={setInputValue} />
+     <InputComponent inputValue={inputValue} setInputValue={setInputValue} />
      <DisplayComponent inputValue={inputValue} />
     </>
     );
@@ -40,7 +40,7 @@ const InputComponent =({inputValue , setInputValue})=>{
         </>
     );
 };
-const DisplayComponent =({inputValue})=>{
+const DisplayComponent = ({inputValue})=>{
     
     return <p>The current input values is :{inputValue} </p>;
 };
