@@ -1,5 +1,6 @@
-import "./Todo.css";
 import {useState} from "react";
+import { MdCheck, MdDeleteForever } from "react-icons/md";
+import "./Todo.css";
 export const Todo=()=>{
     const[inputValue , setInputValue] = useState(""); 
 
@@ -9,21 +10,28 @@ export const Todo=()=>{
 
 
 
-    const handleInputChange=(value)=>{
+    const handleInputChange = (value) => {
         setInputValue(value);
     };
-    const handleFormSubmit=(event)=>{
+    const handleFormSubmit = (event) =>{
         event.preventDefault();    // here preventDefault can prevent the the by default property of  form .
 
-        if(!inputValue) return;
+        if(!inputValue) return; // first validation .
+
+        if(task.includes(inputValue)){        // Second validation .
+            setInputValue("")
+            return ;
+        } 
 
         // setTask((prevTask) => console.log(prevTask) ); // We can get previous value .
 
         // ------------ , or , the just above code ---------------
 
-        setTask((prevTask) => [...prevTask , inputValue] ); // using spread operator       
+        setTask((prevTask) => [...prevTask , inputValue] ); // using spread operator  
+        
+        setInputValue(""); // third validation .
 
-    }
+    };
     return(
         <section className="todo-container">
             <header>
@@ -38,6 +46,24 @@ export const Todo=()=>{
                         <button type="submit" className="todo-btn">Add task</button>
                     </div>
                 </form>
+            </section>
+          
+            <section className="myUnOrdList">
+                <ul>
+                    {task.map((curTask , index) => {
+                        return (
+                             <li key={index} className="todo-item">
+                                <span>{curTask}</span>
+                                <button className="check-btn">
+                                    <MdCheck />
+                                </button>
+                                <button className="delete-btn">
+                                    <MdDeleteForever />
+                                </button>
+                            </li>
+                        );
+                    })} 
+                </ul>
             </section>
         </section>
     );

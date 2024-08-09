@@ -25,6 +25,7 @@
 import {useState} from "react";
 import "./ToggleSwitch.css";
 import { IoIosSwitch } from "react-icons/io";
+import { FaExchangeAlt } from "react-icons/fa";
 export const ToggleSwitch =()=>{
     const[isOn , setIsOn] = useState(false);
 
@@ -38,12 +39,10 @@ export const ToggleSwitch =()=>{
 
     return(
      <>
-        <h1>Hello</h1>
-        <h1>Hello</h1>
-        <h1>Hello</h1>
-        <h1>Hello</h1>
+        
         <h1 style={{color:"#000" , textAlign:"center"}}> Toggle Switch{" "} </h1>
         <IoIosSwitch style={{color:"red" , textAlign:"center", fontSize:"30px"}} />
+        <FaExchangeAlt style={{color:"red" , textAlign:"center"}} />
         <div className="toggle-switch" style={styleBack} onClick={handleToggleSwitch}>
             
             {/*------------------ Template literals ---------------- */}
