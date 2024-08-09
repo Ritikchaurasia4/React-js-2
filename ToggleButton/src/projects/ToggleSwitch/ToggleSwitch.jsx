@@ -24,6 +24,7 @@
 
 import {useState} from "react";
 import "./ToggleSwitch.css";
+import { IoIosSwitch } from "react-icons/io";
 export const ToggleSwitch =()=>{
     const[isOn , setIsOn] = useState(false);
 
@@ -36,6 +37,13 @@ export const ToggleSwitch =()=>{
     const styleBack = {backgroundColor : isOn ? "#4caf50" : ""};
 
     return(
+     <>
+        <h1>Hello</h1>
+        <h1>Hello</h1>
+        <h1>Hello</h1>
+        <h1>Hello</h1>
+        <h1 style={{color:"#000" , textAlign:"center"}}> Toggle Switch{" "} </h1>
+        <IoIosSwitch style={{color:"red" , textAlign:"center", fontSize:"30px"}} />
         <div className="toggle-switch" style={styleBack} onClick={handleToggleSwitch}>
             
             {/*------------------ Template literals ---------------- */}
@@ -45,5 +53,6 @@ export const ToggleSwitch =()=>{
                 <span className="switch-state">{clickCheck}</span>
             </div>
         </div>
+     </>
     );
 };
