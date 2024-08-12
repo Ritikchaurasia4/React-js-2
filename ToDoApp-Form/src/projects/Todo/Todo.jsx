@@ -156,16 +156,10 @@ import {TodoDate} from "./TodoDate";
 
 import "./Todo.css";
 export const Todo=()=>{
-    
-    // const[inputValue , setInputValue] = useState(""); 
+     
 
     const[task , setTask] = useState([]);
-
     
-
-    // const handleInputChange = (value) => {
-    //     setInputValue(value);
-    // };
     const handleFormSubmit = (inputValue) =>{
            
 
@@ -176,19 +170,6 @@ export const Todo=()=>{
         setTask((prevTask) => [...prevTask , inputValue] ); 
         
     };
-
-    // ====================================================== Todo , add date and time ================================================================================
-    
-    // setInterval(() => {
-    //     const now = new Date();
-    //     const formattedDate = now.toLocaleDateString(); // If any data continuously change in react then we need useState.
-    //     const formattedTime = now.toLocaleTimeString();
-    //     setDateTime(`${formattedDate} - ${formattedTime}`);
-    // } , 1000);
-
-    // The just Above code can also be written as 
-
-    
 
     const handleDeleteTodo = (value) => {
         console.log(task); 
@@ -207,21 +188,8 @@ export const Todo=()=>{
         <section className="todo-container">
             <header>
              <h1>Todo List</h1>
-            
              <TodoDate/>
-           
             </header>
-
-            {/* <section className="form">
-                <form onSubmit={handleFormSubmit}>
-                    <div>
-                        <input type="text" className="todo-input" autoComplete="off" value={inputValue} onChange={(event) => handleInputChange(event.target.value) }/>
-                    </div>
-                    <div>
-                        <button type="submit" className="todo-btn">Add task</button>
-                    </div>
-                </form>
-            </section> */}
 
             <TodoForm onAddTodo={handleFormSubmit}/>
           
