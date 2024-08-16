@@ -17,6 +17,26 @@
 
 // ===================== The above code can also be written as ===================================
 
+// import {useState} from "react";
+// export const Counter = () =>{
+//     const[count , setCount] = useState(0);
+//     const handleIncrement = () =>{
+//        setCount(count+1);
+//        console.log("Inner" , count);
+//     }
+//     console.log(" outer" , count);
+//     return( <div className="container state-container " style={{textAlign:"center"}}>
+//         <h1>useStateHook</h1>
+//         <br />
+//         <p>Count: {count}</p>
+//         <br />
+//         <button onClick={handleIncrement}>Increment</button>
+//     </div>
+//    );
+// };
+
+// ================================================ useState Hook challanges =========================================================
+
 import {useState} from "react";
 export const Counter = () =>{
     const[count , setCount] = useState(0);
@@ -28,8 +48,15 @@ export const Counter = () =>{
     return( <div className="container state-container " style={{textAlign:"center"}}>
         <h1>useStateHook</h1>
         <br />
-        <p>{count}</p>
+       
+        <p>Count: {count}</p>
+        <label htmlFor="">Step:</label>
+        <input type="number"  />
+        <br />
+        <br />
         <button onClick={handleIncrement}>Increment</button>
+        <button>Decrement </button>
+        <button>Reset</button>
     </div>
    );
 };
