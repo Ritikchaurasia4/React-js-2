@@ -6,12 +6,16 @@
 
 // import {RegistrationForm} from "./hooks/useState/Registration";
 
-import {ReactUseEffect} from "./hooks/useEffect/index";
+// import {ReactUseEffect} from "./hooks/useEffect/index";
+
+import {Challange} from "./hooks/useEffect/EffectChallenge";
+
 export const App = () =>{
   return (
         // <CounterChallenge/>
         //  <ControlledForm/>
-       //  <RegistrationForm/>
-       <ReactUseEffect/>
+        //  <RegistrationForm/>
+        //  <ReactUseEffect/>
+            <Challange/>
   );
 };
