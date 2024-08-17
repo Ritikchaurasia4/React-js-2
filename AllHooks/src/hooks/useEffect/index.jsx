@@ -19,7 +19,7 @@
 
 // ====================== for date and time ===========================
 
-// Since we know that , deals with the external data useEffect are used .
+// Since we know that , deals with the external data , useEffect are use .
 
 
 import {useEffect, useState} from "react";
@@ -37,7 +37,7 @@ export const ReactUseEffect = () =>{
 
     return(
         <div className="container effect-container">
-            <h1> Date : {date} </h1>
+            <h1> Time : {date} </h1>
        
         </div>
     );
