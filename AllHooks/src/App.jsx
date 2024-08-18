@@ -8,7 +8,9 @@
 
 // import {ReactUseEffect} from "./hooks/useEffect/index";
 
-import {Challange} from "./hooks/useEffect/EffectChallenge";
+// import {Challange} from "./hooks/useEffect/EffectChallenge";
+
+import {CleanUp} from "./hooks/useEffect/CleanUp";
 
 export const App = () =>{
   return (
@@ -16,6 +18,7 @@ export const App = () =>{
         //  <ControlledForm/>
         //  <RegistrationForm/>
         //  <ReactUseEffect/>
-            <Challange/>
+        // <Challange/>
+        <CleanUp/>
   );
 };
