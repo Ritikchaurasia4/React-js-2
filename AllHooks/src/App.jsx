@@ -12,7 +12,7 @@
 
 // import {CleanUp} from "./hooks/useEffect/CleanUp";
 
-import { HowNotToFetchApi } from "./hooks/useEffect/HowNotToFetchApi";
+import { HowToFetchApi } from "./hooks/useEffect/HowToFetchApi";
 
 export const App = () =>{
   return (
@@ -22,6 +22,6 @@ export const App = () =>{
         //  <ReactUseEffect/>
         // <Challange/>
         // <CleanUp/>
-        <HowNotToFetchApi/>
+        <HowToFetchApi/>
   );
 };
