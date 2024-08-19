@@ -123,24 +123,42 @@ export const HowToFetchApi = () =>{
 
   // ============================================== The just Above code can also be written as ========================================
 
-  const fetchPokemon = ()  =>{
-     fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
-    .then((res)=>res.json())
-    .then((data)=>{
-     setPokemon(data) 
-     setLoading(false);
-   })
-   .catch((error)=>{
-      console.log(error) ;
-      setError(error);
-      setLoading(false)
-    });
 
-  }
+     const API = 'https://pokeapi.co/api/v2/pokemon/pikachu';
+//   const fetchPokemon = ()  =>{
+//      fetch(API);
+//     .then((res)=>res.json())
+//     .then((data)=>{
+//      setPokemon(data) 
+//      setLoading(false);
+//    })
+//    .catch((error)=>{
+//       console.log(error) ;
+//       setError(error);
+//       setLoading(false)
+//     });
+// }
+
+// The just above commented code can also be written with the help of async await function 
+
+ const fetchPokemon = async () => {
+    try{
+      const res = await fetch(API);
+      const data = await res.json();
+      setPokemon(data) 
+      setLoading(false);
+    }
+    catch(error){
+      console.log(error); 
+      setError(error);
+      setLoading(false);
+
+    }
+ };
 
   useEffect(() => {
 
-    fetchPokemon()
+    fetchPokemon();
 
   } ,[]);
 
@@ -174,7 +192,7 @@ export const HowToFetchApi = () =>{
 
     <section>
       <header>
-        <h1>Lets catch Pokemon </h1>
+        <h1>Lets catch Pokemon </h1> 
       </header>
       <ul className="card-demo">
         <li className="pokemon-card">
