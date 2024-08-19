@@ -96,13 +96,17 @@ import {useState , useEffect} from "react";
 
 export const HowToFetchApi = () =>{
 
-  const[apiData , setApiData] = useState(null);
+  const[pokemon , setPokemon] = useState(null);
+
+  const[loading , setLoading] = useState(true);
+
+  const[error , setError] =useState(null);
 
   
   // fetch("https://jsonplaceholder.typicode.com/posts")
   // .then((res)=>res.json())
   // .then((data)=>{
-  //   // setApiData(data)  We can not do this because there will be infinite loop and there are many request arrive , Hence we can not fetch Api 
+  //   // setPokemon(data)  We can not do this because there will be infinite loop and there are many request arrive , Hence we can not fetch Api 
   // })
   // .catch((error)=>console.log(error));
 
@@ -112,7 +116,7 @@ export const HowToFetchApi = () =>{
   //   fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
   //   .then((res)=>res.json())
   //   .then((data)=>{
-  //    setApiData(data) 
+  //    setPokemon(data) 
   //  })
   // .catch((error)=>console.log(error));
   // } ,[]);
@@ -120,12 +124,17 @@ export const HowToFetchApi = () =>{
   // ============================================== The just Above code can also be written as ========================================
 
   const fetchPokemon = ()  =>{
-     fetch("https://pokeapi.co/api/v2/pokemon/squirtle")
+     fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
     .then((res)=>res.json())
     .then((data)=>{
-     setApiData(data) 
+     setPokemon(data) 
+     setLoading(false);
    })
-  .catch((error)=>console.log(error));
+   .catch((error)=>{
+      console.log(error) ;
+      setError(error);
+      setLoading(false)
+    });
 
   }
 
@@ -135,16 +144,28 @@ export const HowToFetchApi = () =>{
 
   } ,[]);
 
-  console.log(apiData)
+  console.log(pokemon)
 
- if(apiData){
-
+ if(loading)
+   return(
+   <div>
+    <h1>Loading................</h1>
+  </div>
+ );
+ 
+ if(error)
+  return(
+  <div>
+   <h1>Error : {error.message}</h1>
+ </div>
+);
+ 
   return(
     // <div className="container effect-container">
     //   <ul>
     //     Data:
     //     {
-    //       apiData.map((curData) =>{
+    //       pokemon.map((curData) =>{
     //       return(<li key={curData.id}> {curData.title} </li>)
     //     })
     //     }
@@ -158,12 +179,27 @@ export const HowToFetchApi = () =>{
       <ul className="card-demo">
         <li className="pokemon-card">
           <figure>
-            <img src={apiData.sprites.other.dream_world.front_default} alt={apiData.name} className="pokemon-image" />
+            <img src={pokemon.sprites.other.dream_world.front_default} alt={pokemon.name} className="pokemon-image" />
           </figure>
-          <h1>{apiData.name}</h1>
+          <h1>{pokemon.name}</h1>
+          
+          <div className="grid-three-cols">
+
+            <p className="pokemon-info">
+              Height: <span> {pokemon.height} </span>
+            </p>
+
+            <p className="pokemon-info">
+              Weight: <span> {pokemon.weight} </span>
+            </p>
+
+            <p className="pokemon-info">
+              Speed: <span> {pokemon.stats[5].base_stat} </span>
+            </p>
+            
+          </div>
         </li>
       </ul>
     </section>
   );
 };
-}
