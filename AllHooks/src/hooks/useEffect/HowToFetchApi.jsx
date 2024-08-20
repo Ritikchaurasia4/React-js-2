@@ -149,9 +149,10 @@ export const HowToFetchApi = () =>{
       setLoading(false);
     }
     catch(error){
-      console.log(error); 
+      console.log(error);
+      setLoading(false); 
       setError(error);
-      setLoading(false);
+      
 
     }
  };
@@ -194,6 +195,7 @@ export const HowToFetchApi = () =>{
       <header>
         <h1>Lets catch Pokemon </h1> 
       </header>
+      
       <ul className="card-demo">
         <li className="pokemon-card">
           <figure>
