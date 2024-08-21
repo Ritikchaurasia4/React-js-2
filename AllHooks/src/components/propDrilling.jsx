@@ -17,7 +17,7 @@ const ChildComponent = (props) =>{
 const GrandChildComponent = (props) =>{
   return(<>
         <h1> Hello , I am a component C </h1>
-        <GrandGrandChildComponent data={props.data}/>
+        <GrandGrandChildComponent data={props.data}/> []
   </>);
 };
 
