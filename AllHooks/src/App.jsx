@@ -16,8 +16,9 @@
 
 // import {UseRef} from "./hooks/useRef/index.jsx";
 
-import {ForwardRefs} from "./hooks/useRef/forwardRef";
+// import {ForwardRefs} from "./hooks/useRef/forwardRef";
 
+import {Useid} from "./hooks/useId/index";
 
 export const App = () =>{
   return (
@@ -29,6 +30,6 @@ export const App = () =>{
         // <CleanUp/>
         // <HowToFetchApi/>
         // <UseRef/>
-        <ForwardRefs/>
+        <Useid/>
   );
 };
