@@ -20,22 +20,40 @@
 
 // import {Useid} from "./hooks/useId/index";
 
-import {PropDrilling} from "./components/propDrilling.jsx";
+// import {PropDrilling} from "./components/propDrilling.jsx";
+
+import { BioProvider  } from "./components/contextAPI";
+import { About } from "./components/contextAPI/about";
+
+import { Home } from "./components/contextAPI/Home";
 
 export const App = () =>{
   return (
     <>
-        {/* // <CounterChallenge/>
-        //  <ControlledForm/>
-        //  <RegistrationForm/>
-        //  <ReactUseEffect/>
-        // <Challange/>
-        // <CleanUp/>
-        // <HowToFetchApi/>
-        // <UseRef/>
-        // <Useid/> */}
-        <PropDrilling/>
+        {/* <CounterChallenge/> */}
+
+        {/* <ControlledForm/> */}
         
+        {/* <RegistrationForm/> */}
+
+        {/* <ReactUseEffect/> */}
+
+        {/* <Challange/> */}
+
+        {/* <CleanUp/> */}
+
+        {/* <HowToFetchApi/> */}
+
+        {/* <UseRef/> */}
+
+        {/* <Useid/> */}
+
+        {/* <PropDrilling/> */}
+        
+        <BioProvider>
+          <Home/>
+          <About/>
+        </BioProvider>
      </>
         
   );
