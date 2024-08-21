@@ -10,10 +10,10 @@ function App() {
     <>
     <div className="mt-10 lp-10 ">TailWind Css</div>
     <h1 className="text-3xl font-bold underline mt-16 text-blue-700">
-      Hello TailWind Css
+      Hello TailWind Css !
     </h1>
     </>
   );
 }
 
-export default App
+export default App;
