@@ -4,10 +4,18 @@ export const ShortCircuitExample = () =>{
    const[isLoggedIn , setIsLoggedIn] = useState(true);
    const[user , setUser] = useState(""); 
     return (
+
       <section className="container short-container">
          <h1> Welcome to Short circuit evaluation</h1>
-         { isLoggedIn && <p>You are logged in</p>}
+ 
+         {/* conditional rendering using short circuit evaluation */}
+         
+         { isLoggedIn && <p>You are logged in!</p>}
+
+         {/* another example of short circuit evaluation */}
+
          { user ? `Hello ${user}` :"please login!" }
+
          <div className="grid-three-cols">
 
             {/* Here in just below code the data is changing hence useState wxill be apply */}
@@ -17,6 +25,7 @@ export const ShortCircuitExample = () =>{
             <button onClick={() => setUser("Ritik Chaurasia")}>Set User</button>
             <button onClick={() => setUser("")}>Clear User</button>
          </div>
+
       </section>
     );
 };
