@@ -10,15 +10,17 @@ export const UseRef = () =>{
 
     console.log(username);
 
-    const handleSubmit = (e) =>{
-        e.preventDefault();
+    const handleSubmit = (event) =>{
+        event.preventDefault();
         console.log(username.current.value , password.current.value);    
     }
+
+    
 
     return (
         <form onSubmit={handleSubmit}> 
 
-            <input type="text" id="username" ref={username} />
+            <input type="text" id="username" ref={username} /> 
             <br />
             <input type="text" id="password" ref={password} />
             <br />
