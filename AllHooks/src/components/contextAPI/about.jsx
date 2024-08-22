@@ -1,10 +1,23 @@
-import { useContext } from "react";
+// import { useContext } from "react";
 
-import { BioContext } from ".";
+// import { BioContext } from ".";
+
+// export const About = () =>{
+
+//     const { myAge} = useContext(BioContext);
+
+//     return <h1> I am a full stack Developer (About). </h1>;
+// };
+
+// ===================== ==========================
+
+
+
+import {  useBioContext } from ".";
 
 export const About = () =>{
 
-    const {myName , myAge} = useContext(BioContext);
+    const {myAge} = useBioContext();
 
-    return <h1>Hello Context API (About) my name is {myName} , I am {myAge} year old.</h1>;
+    return <h1> I am a full stack Developer (About). {myAge} </h1>;
 };
