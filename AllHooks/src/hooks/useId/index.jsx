@@ -37,7 +37,7 @@
 //     );
 // };
 
-// ====================================== The above code does not follow the concept ( don't repeat yourself ). =============================================
+// ====================================== The above code does not follow the concept of ( don't repeat yourself ). =============================================
 
 // ============================ The just above commented code can also be written as ----------------------------------
 
