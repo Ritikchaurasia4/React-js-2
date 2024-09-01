@@ -147,6 +147,7 @@ const router = createBrowserRouter([
       
     ],
     
+  //  Error Handling ................... 
    errorElement : <ErrorPage/> ,
 
 
@@ -156,7 +157,6 @@ const router = createBrowserRouter([
 
   return (
     <>
-      {/* <h1> Hello react Router </h1> */}
       <RouterProvider router={router}/>
     </>
   );
