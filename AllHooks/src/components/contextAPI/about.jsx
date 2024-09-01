@@ -28,7 +28,7 @@ import {  BioContext, use } from ".";
 
 export const About = () =>{
 
-    const {myAge} = use(BioContext);
+    const {myAge} = use(BioContext)
 
     return <h1> I am a full stack Developer (About). {myAge} </h1>;
 };
