@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 export const Header = () => {
+    
   const getNavLinkStyle = ({ isActive }) => {
     return {
       color: isActive ? "green" : "black",
@@ -31,47 +32,45 @@ export const Header = () => {
 
           <nav className="navbar">
             <ul>
+
+            {/* Active link in react  first way...... */}
+
+
               <li className="nav-item">
-                <NavLink
-                  to="/"
-                  className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
-                  }
-                >
+                <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link" } >
                   Home
                 </NavLink>
               </li>
+
+             {/* Active link in react  second way...... */}
+
+
               <li className="nav-item">
-                <NavLink
-                  to="/about"
-                  style={({ isActive }) => {
+                <NavLink to="/about" style={({ isActive }) => {
                     return {
-                      color: isActive ? "blue" : "black",
+                      color: isActive ? "red" : "black",
                     };
                   }}
                 >
                   about
                 </NavLink>
               </li>
+
+              {/* Active link in react  third way...... */}
+
+
               <li className="nav-item">
-                <NavLink
-                  to="movie"
-                  className="nav-link"
-                  style={getNavLinkStyle}
-                >
+                <NavLink to="movie" className="nav-link" style={getNavLinkStyle} >
                   movies
                 </NavLink>
               </li>
+
               <li className="nav-item">
-                <NavLink
-                  to="contact"
-                  className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
-                  }
-                >
+                <NavLink to="contact" className={({ isActive }) => isActive ? "nav-link active" : "nav-link" } >
                   contact
                 </NavLink>
               </li>
+
             </ul>
           </nav>
         </div>
