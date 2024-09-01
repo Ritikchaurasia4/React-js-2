@@ -2,16 +2,26 @@
 //     return <h1>  404 Error page </h1>;
 // };
 
-// We can also handle the error using hook ,For this  the code are given below ......................
+// ........................... We can also handle the error using hook ,For this  the code are given below ......................
 
 
 import {useRouteError} from "react-router-dom";
-import { NavLink } from "react-router-dom"; 
+// import { NavLink } from "react-router-dom"; 
+
+import { useNavigate } from "react-router-dom";   
 
 export const ErrorPage = () =>{
 
     const error = useRouteError();
     console.log(error);
+
+    // ... useNavigate always return a function , and (useNavigate is used when we type wrong url in the search engine ) then  It helps to go to the specific URL, forward or backward pages. In the updated version . means go back just previous page not directly at Home  page . ( just below the code )
+
+    const navigate = useNavigate();
+
+    const handleGoBack = () => {
+        navigate(-1);
+    }
     
     if(error.status === 404){
         return (
@@ -26,16 +36,20 @@ export const ErrorPage = () =>{
                     </div>
                 </div>
 
-                <NavLink to="/" className="btn">
+                {/* ------------- When we use Navlink (just below commented code) then we will go directly on Home page always -----------------  */}
+
+                {/* <NavLink to="/" className="btn">
                     Go Bak to Home page 
-                </NavLink>
+                </NavLink> */}
+
+                <button className="btn" onClick={handleGoBack}>
+                    Go Back
+                </button>   
 
             </section>
         );
 
     }
-
-    
 
     return <h1> The page you are looking does not exist </h1>;
 };
