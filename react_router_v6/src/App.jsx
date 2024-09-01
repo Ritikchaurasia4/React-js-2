@@ -76,12 +76,13 @@
 
 import {createBrowserRouter , RouterProvider} from "react-router-dom";
 
+import "./App.css";
 import {Home} from "./pages/Home";
 import {About} from "./pages/About";
 import {Contact} from "./pages/Contact";
 import {Movie} from "./pages/Movie";
 import {AppLayout} from "./components/layout/AppLayout";
-
+import { ErrorPage } from "./pages/errorPage";
 
 export const App = () => {
 
@@ -146,13 +147,16 @@ const router = createBrowserRouter([
       
     ],
     
+   errorElement : <ErrorPage/> ,
+
+
   } ,
 
 ]);
 
   return (
     <>
-      <h1> Hello react Router </h1>
+      {/* <h1> Hello react Router </h1> */}
       <RouterProvider router={router}/>
     </>
   );
