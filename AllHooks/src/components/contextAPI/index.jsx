@@ -19,7 +19,7 @@ export const BioProvider = ({children}) =>{
 
     // const myName = "Ritik Chaurasia";
 
-       const myName = "Ritik Chaurasia";
+       const myName = "Ritik Chaurasia"
 
        const myAge = 21;
 
