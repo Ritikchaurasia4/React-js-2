@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 export const Header = () => {
-    
+
   const getNavLinkStyle = ({ isActive }) => {
     return {
       color: isActive ? "green" : "black",
@@ -33,7 +33,7 @@ export const Header = () => {
           <nav className="navbar">
             <ul>
 
-            {/* Active link in react  first way...... */}
+            {/* Active link in react ,  first way...... */}
 
 
               <li className="nav-item">
@@ -42,7 +42,7 @@ export const Header = () => {
                 </NavLink>
               </li>
 
-             {/* Active link in react  second way...... */}
+             {/* Active link in react , second way...... */}
 
 
               <li className="nav-item">
@@ -56,7 +56,7 @@ export const Header = () => {
                 </NavLink>
               </li>
 
-              {/* Active link in react  third way...... */}
+              {/* Active link in react , third way...... */}
 
 
               <li className="nav-item">
