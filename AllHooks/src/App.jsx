@@ -22,10 +22,15 @@
 
 // import {PropDrilling} from "./components/propDrilling.jsx";
 
-import { BioProvider  } from "./components/contextAPI";
-import { About } from "./components/contextAPI/about";
 
-import { Home } from "./components/contextAPI/Home";
+//  import { BioProvider  } from "./components/contextAPI";
+//  import { About } from "./components/contextAPI/about";
+//  import { Home } from "./components/contextAPI/Home";
+
+
+// import {ThemeProvider , DarkLight} from "./components/contextAPI/DarkLight";
+
+import {ReducerComp} from "./hooks/useReducer/index";
 
 export const App = () =>{
   return (
@@ -46,15 +51,23 @@ export const App = () =>{
 
         {/* <UseRef/> */}
 
+        {/* <ForwardRefs/> */}
+
         {/* <Useid/> */}
 
         {/* <PropDrilling/> */}
         
-        <BioProvider>
+        {/* <BioProvider>
           <Home/>
           <About/>
-        </BioProvider>
+        </BioProvider> */}
+
+        {/* <ThemeProvider>
+          <DarkLight/>
+        </ThemeProvider> */}
+
+        <ReducerComp/>
      </>
-        
+          
   );
 };

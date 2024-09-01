@@ -15,8 +15,6 @@ export const UseRef = () =>{
         console.log(username.current.value , password.current.value);    
     }
 
-    
-
     return (
         <form onSubmit={handleSubmit}> 
 

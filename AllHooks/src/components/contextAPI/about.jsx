@@ -13,11 +13,22 @@
 
 
 
-import {  useBioContext } from ".";
+// import {  useBioContext } from ".";
+
+// export const About = () =>{
+
+//     const {myAge} = useBioContext();
+
+//     return <h1> I am a full stack Developer (About). {myAge} </h1>;
+// };
+
+// =======================================================
+
+import {  BioContext, use } from ".";
 
 export const About = () =>{
 
-    const {myAge} = useBioContext();
+    const {myAge} = use(BioContext);
 
     return <h1> I am a full stack Developer (About). {myAge} </h1>;
 };

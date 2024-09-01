@@ -1,8 +1,8 @@
 // ============================= context API ==================================================================
 
-import {createContext} from "react";
+import {createContext , use } from "react";
 
-import { useContext } from "react";
+// import { useContext } from "react"; 
 
 // When we create a variable with the help of createContext() then that variable work as a Component in Reactjs . Hence BioContext workas a component. First letter of the variable must be Uppercase.
 
@@ -35,8 +35,19 @@ export const BioProvider = ({children}) =>{
 
 // ========================= Custom Hook ===============================
 
+// export const useBioContext = () =>{
+//     const context = useContext(BioContext);
+//     if(context === undefined)
+//     {
+//         throw new Error("Component must be wrapped with BioProvider");
+//     }
+//     return context;
+// };
+
+// ======================== use Hook ========================================
+
 export const useBioContext = () =>{
-    const context = useContext(BioContext);
+    const context = use(BioContext);
     if(context === undefined)
     {
         throw new Error("Component must be wrapped with BioProvider");
