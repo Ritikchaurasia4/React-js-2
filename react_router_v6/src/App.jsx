@@ -82,7 +82,8 @@ import {About} from "./pages/About";
 import {Contact} from "./pages/Contact";
 import {Movie} from "./pages/Movie";
 import {AppLayout} from "./components/layout/AppLayout";
-import { ErrorPage } from "./pages/errorPage";
+import { ErrorPage } from "./pages/ErrorPage";
+import {GetMoviesData} from "./api/GetAPIData";
 
 export const App = () => {
 
@@ -136,8 +137,8 @@ const router = createBrowserRouter([
         },
         {
           path : "/movie" ,
-          element : <Movie/>
-      
+          element : <Movie/>,
+          loader : GetMoviesData ,
         },
         {
           path : "/contact" ,
