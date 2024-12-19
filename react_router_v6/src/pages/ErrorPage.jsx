@@ -8,7 +8,7 @@
 import {useRouteError} from "react-router-dom";
 // import { NavLink } from "react-router-dom"; 
 
-import { useNavigate } from "react-router-dom";   
+import { useNavigate } from "react-router-dom";     // This state always return a function
 
 export const ErrorPage = () =>{
 

@@ -1,4 +1,4 @@
-// To get the value of API we use useLoader hook . useLoader provides the value returned from your route loader .
+// // To get the value of API we use useLoader hook . useLoader provides the value returned from your route loader .
 
 import { useLoaderData } from "react-router-dom";
 import { Card } from "../components/UI/Card";

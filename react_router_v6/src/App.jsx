@@ -84,6 +84,8 @@ import {Movie} from "./pages/Movie";
 import {AppLayout} from "./components/layout/AppLayout";
 import { ErrorPage } from "./pages/ErrorPage";
 import {GetMoviesData} from "./api/GetAPIData";
+import { MovieDetails } from "./components/UI/MovieDetails";
+import { GetMovieDetails } from "./api/GetMovieDetails";
 
 export const App = () => {
 
@@ -140,6 +142,16 @@ const router = createBrowserRouter([
           element : <Movie/>,
           loader : GetMoviesData ,
         },
+
+        // Here The jsut above code i.e ( Movie components) , We make Dynamic Hence We Have the code for this ....  
+        // ==== Create Dynamic route in the just below code , in Below movieID is a dynamic value .
+
+        {
+          path : "/movie/:movieID" ,
+          element : <MovieDetails/>,
+          loader : GetMovieDetails ,
+        },
+ 
         {
           path : "/contact" ,
           element : <Contact/>
